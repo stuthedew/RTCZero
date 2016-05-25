@@ -46,19 +46,19 @@ public:
 
   void attachInterrupt(voidFuncPtr callback);
   void detachInterrupt();
-  
+
   void standbyMode();
-  
+
   /* Get Functions */
 
   uint8_t getSeconds();
   uint8_t getMinutes();
   uint8_t getHours();
-  
+
   uint8_t getDay();
   uint8_t getMonth();
   uint8_t getYear();
-  
+
   uint8_t getAlarmSeconds();
   uint8_t getAlarmMinutes();
   uint8_t getAlarmHours();
@@ -95,6 +95,31 @@ public:
   uint32_t getY2kEpoch();
   void setEpoch(uint32_t ts);
   void setY2kEpoch(uint32_t ts);
+  void putEpoch(uint32_t ts);
+  void putY2kEpoch(uint32_t ts);
+
+  /* Put Functions */
+
+  void putSeconds(uint8_t seconds);
+  void putMinutes(uint8_t minutes);
+  void putHours(uint8_t hours);
+  void putTime(uint8_t hours, uint8_t minutes, uint8_t seconds);
+
+  void putDay(uint8_t day);
+  void putMonth(uint8_t month);
+  void putYear(uint8_t year);
+  void putDate(uint8_t day, uint8_t month, uint8_t year);
+
+  void putAlarmSeconds(uint8_t seconds);
+  void putAlarmMinutes(uint8_t minutes);
+  void putAlarmHours(uint8_t hours);
+  void putAlarmTime(uint8_t hours, uint8_t minutes, uint8_t seconds);
+
+  void putAlarmDay(uint8_t day);
+  void putAlarmMonth(uint8_t month);
+  void putAlarmYear(uint8_t year);
+  void putAlarmDate(uint8_t day, uint8_t month, uint8_t year);
+
 
 private:
   bool _configured;
